@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  web:
+    build: ./djangobnb_backend
+    container_name: djangobnb_backend
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./djangobnb_backend/:/usr/src/djangobnb_backend/
+    ports:
+      - 8000:8000
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - db
+  db:
+    image: postgres:17
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    container_name: djangobnb_postgres
+    environment:
+      - POSTGRES_DB=djangobnb
+      - POSTGRES_USER=postgresuser
+      - POSTGRES_PASSWORD=postgrespassword
+volumes:
+  postgres_data:

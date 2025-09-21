@@ -1,0 +1,76 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.py.class
+*.so
+
+# === Virtualenv ===
+env/
+venv/
+ENV/
+.env
+.venv
+
+# === Django ===
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+
+# Django media & static (jangan commit hasil upload user)
+media/
+staticfiles/
+
+# === VSCode / IDE ===
+.vscode/
+.idea/
+*.swp
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Docker ===
+*.pid
+*.seed
+*.pid.lock
+*.sock
+*.tmp
+
+# Ignore local env files
+.env*
+!.env.example
+
+# === Pytest / Coverage ===
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# === Mypy ===
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# === Pipenv / Poetry ===
+Pipfile.lock
+poetry.lock
+
+# === Compiled ===
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
